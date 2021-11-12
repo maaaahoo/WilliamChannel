@@ -22,8 +22,9 @@ const ListRow: React.FC<ListRowProps> = (props) => {
         <AntDesign name="right" />
       </TouchableOpacity>
       <View style={{
-        width: Dimensions.get("window").width,
-        height: 1,
+        width: Dimensions.get("window").width - 20,
+        height: .5,
+        marginLeft: 20,
         backgroundColor: '#e9e9e9'
       }} />
     </>
