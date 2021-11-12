@@ -10,6 +10,9 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"Joe & the Juice Cards"} onPress={() => {
         props.navigation.navigate('JuiceCards');
       }} />
+      <ListRow title={"Google Chrome iOS Tabs"} onPress={() => {
+        props.navigation.navigate('Tab');
+      }} />
     </View>
   );
 }
