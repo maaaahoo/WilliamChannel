@@ -13,6 +13,12 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"Google Chrome iOS Tabs"} onPress={() => {
         props.navigation.navigate('Tab');
       }} />
+      <ListRow title={"Revolut Chart"} onPress={() => {
+        props.navigation.navigate('RevolutChart');
+      }} />
+      <ListRow title={"Soundcloud Audio Player"} onPress={() => {
+        props.navigation.navigate('AudioPlayer');
+      }} />
     </View>
   );
 }

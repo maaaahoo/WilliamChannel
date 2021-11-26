@@ -28,6 +28,7 @@ const Tab: React.FC<{}> = () => {
             width: TABBAR_WIDTH * 2
           }}
           horizontal={true}
+          showsHorizontalScrollIndicator={false}
           onScroll={Animated.event([ {nativeEvent: {contentOffset: { x }}}], { useNativeDriver: true })}
           snapToInterval={TAB_WIDTH + TAB_WIDTH / 2}
         />
