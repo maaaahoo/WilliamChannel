@@ -12,7 +12,7 @@ interface WaveformProps {
     samples: number[],
   },
   color: string,
-  progress: Animated.Value,
+  progress?: Animated.Value,
 } 
 
 const AnimatedRect = Animated.createAnimatedComponent(Rect);

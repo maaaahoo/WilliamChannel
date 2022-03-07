@@ -16,6 +16,7 @@ import JuiceCards from '../screens/youtube/JuiceCards';
 import Tab from '../screens/youtube/Tab';
 import RevolutChart from '../screens/youtube/RevolutChart';
 import AudioPlayer from '../screens/youtube/AudioPlayer';
+import Meditation from '../screens/youtube/Meditation';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -45,6 +46,7 @@ function RootNavigator() {
       <Stack.Screen name="Tab" component={Tab} />
       <Stack.Screen name="RevolutChart" component={RevolutChart} />
       <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
+      <Stack.Screen name="Meditation" component={Meditation} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />

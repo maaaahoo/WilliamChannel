@@ -19,6 +19,9 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"Soundcloud Audio Player"} onPress={() => {
         props.navigation.navigate('AudioPlayer');
       }} />
+      <ListRow title={"Headspace Meditation"} onPress={() => {
+        props.navigation.navigate('Meditation');
+      }} />
     </View>
   );
 }
