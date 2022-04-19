@@ -22,6 +22,12 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"Headspace Meditation"} onPress={() => {
         props.navigation.navigate('Meditation');
       }} />
+      <ListRow title={"Freeletics Running"} onPress={() => {
+        props.navigation.navigate('Freeletics');
+      }} />
+      <ListRow title={"Instagram Stories"} onPress={() => {
+        props.navigation.navigate('Instagram');
+      }} />
     </View>
   );
 }

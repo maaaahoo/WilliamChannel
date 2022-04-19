@@ -17,6 +17,7 @@ import Tab from '../screens/youtube/Tab';
 import RevolutChart from '../screens/youtube/RevolutChart';
 import AudioPlayer from '../screens/youtube/AudioPlayer';
 import Meditation from '../screens/youtube/Meditation';
+import Freeletics from '../screens/youtube/Freeletics';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -47,6 +48,7 @@ function RootNavigator() {
       <Stack.Screen name="RevolutChart" component={RevolutChart} />
       <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
       <Stack.Screen name="Meditation" component={Meditation} />
+      <Stack.Screen name="Freeletics" component={Freeletics} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
