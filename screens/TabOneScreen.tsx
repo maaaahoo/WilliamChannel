@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
-import { View } from '../components/Themed';
 import ListRow from '../components/ListRow';
 
 const TabOneScreen: React.FC<{}> = (props: any) => {
@@ -27,6 +26,9 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       }} />
       <ListRow title={"Instagram Stories"} onPress={() => {
         props.navigation.navigate('Instagram');
+      }} />
+      <ListRow title={"Withings Health Mate"} onPress={() => {
+        props.navigation.navigate('HealthMate');
       }} />
     </ScrollView>
   );

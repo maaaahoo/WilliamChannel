@@ -19,6 +19,7 @@ import AudioPlayer from '../screens/youtube/AudioPlayer';
 import Meditation from '../screens/youtube/Meditation';
 import Freeletics from '../screens/youtube/Freeletics';
 import Instagram from '../screens/youtube/Instagram';
+import HealthMate from '../screens/youtube/HealthMate';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -51,6 +52,7 @@ function RootNavigator() {
       <Stack.Screen name="Meditation" component={Meditation} />
       <Stack.Screen name="Freeletics" component={Freeletics} />
       <Stack.Screen name="Instagram" component={Instagram} />
+      <Stack.Screen name="HealthMate" component={HealthMate} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
