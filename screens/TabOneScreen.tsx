@@ -30,6 +30,9 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"Withings Health Mate"} onPress={() => {
         props.navigation.navigate('HealthMate');
       }} />
+      <ListRow title={"Snapchat Discovery"} onPress={() => {
+        props.navigation.navigate('SnapchatDiscovery');
+      }} />
     </ScrollView>
   );
 }
