@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {SafeAreaView, ScrollView, View, StyleSheet} from 'react-native';
 import StoryThumbnail from './StoryThumbnail';
 import StoryModal from './StoryModal';
@@ -15,11 +15,17 @@ const Discovery: React.FC<DiscoveryProps> = props => {
   });
   const [position, setPosition] = useState();
 
-  const selectStory = async (story, index: number) => {
+  const selectStory = useCallback(async (story, index: number) => {
     const imagePosition = await thumbnail[index].current?.measure();
     setPosition(imagePosition);
     setSelect(story);
-  }
+  }, []);
+
+  const onRequestClose = useCallback(() => {
+    console.log('onRequestClose');
+    setPosition(null);
+    setSelect(null);
+  }, []);
 
   return (
     <View style={styles.flex}>
@@ -31,7 +37,7 @@ const Discovery: React.FC<DiscoveryProps> = props => {
               <StoryThumbnail
                 ref={thumbnail[i]}
                 key={s.id}
-                selected={false}
+                selected={!!select && select?.id === s.id}
                 onPress={() => {
                   selectStory(s, i);
                 }}
@@ -44,7 +50,7 @@ const Discovery: React.FC<DiscoveryProps> = props => {
       </ScrollView>
       {
         select && (
-          <StoryModal story={select} position={position} />
+          <StoryModal story={select} position={position} onRequestClose={onRequestClose} />
         )
       }
     </View>

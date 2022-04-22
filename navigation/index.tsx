@@ -54,7 +54,9 @@ function RootNavigator() {
       <Stack.Screen name="Freeletics" component={Freeletics} />
       <Stack.Screen name="Instagram" component={Instagram} />
       <Stack.Screen name="HealthMate" component={HealthMate} />
-      <Stack.Screen name="SnapchatDiscovery" component={SnapchatDiscovery} />
+      <Stack.Screen name="SnapchatDiscovery" options={() => ({
+        header: () => null
+      })} component={SnapchatDiscovery} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
