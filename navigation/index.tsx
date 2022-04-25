@@ -21,6 +21,7 @@ import Freeletics from '../screens/youtube/Freeletics';
 import Instagram from '../screens/youtube/Instagram';
 import HealthMate from '../screens/youtube/HealthMate';
 import SnapchatDiscovery from '../screens/youtube/SnapchatDiscovery';
+import TinderSwiping from '../screens/youtube/TinderSwiping';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -57,6 +58,7 @@ function RootNavigator() {
       <Stack.Screen name="SnapchatDiscovery" options={() => ({
         header: () => null
       })} component={SnapchatDiscovery} />
+      <Stack.Screen name="TinderSwiping" component={TinderSwiping} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
