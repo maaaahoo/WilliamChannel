@@ -9,6 +9,9 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"Worklet"} onPress={() => {
         props.navigation.navigate('Worklet');
       }} />
+      <ListRow title={"CircularProgress"} onPress={() => {
+        props.navigation.navigate('CircularProgress');
+      }} />
     </ScrollView>
   );
 }

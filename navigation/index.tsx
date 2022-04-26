@@ -26,6 +26,7 @@ import TinderSwiping from '../screens/canDone/TinderSwiping';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Worklet from '../screens/5minus/Worklet';
+import CircularProgress from "../screens/5minus/CircularProgress"
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -98,6 +99,7 @@ function Stack2Navigator() {
         title: '5 Minus Reanimated',
       })} />
       <Stack2.Screen name="Worklet" component={Worklet} />
+      <Stack2.Screen name="CircularProgress" component={CircularProgress} />
     </Stack2.Navigator>
   );
 }
