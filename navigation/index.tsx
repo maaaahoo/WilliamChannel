@@ -11,25 +11,44 @@ import { ColorSchemeName } from 'react-native';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
+import TabTwoScreen from '../screens/TabTwoScreen';
 
-import JuiceCards from '../screens/youtube/JuiceCards';
-import Tab from '../screens/youtube/Tab';
-import RevolutChart from '../screens/youtube/RevolutChart';
-import AudioPlayer from '../screens/youtube/AudioPlayer';
-import Meditation from '../screens/youtube/Meditation';
-import Freeletics from '../screens/youtube/Freeletics';
-import Instagram from '../screens/youtube/Instagram';
-import HealthMate from '../screens/youtube/HealthMate';
-import SnapchatDiscovery from '../screens/youtube/SnapchatDiscovery';
-import TinderSwiping from '../screens/youtube/TinderSwiping';
+import JuiceCards from '../screens/canDone/JuiceCards';
+import Tab from '../screens/canDone/Tab';
+import RevolutChart from '../screens/canDone/RevolutChart';
+import AudioPlayer from '../screens/canDone/AudioPlayer';
+import Meditation from '../screens/canDone/Meditation';
+import Freeletics from '../screens/canDone/Freeletics';
+import Instagram from '../screens/canDone/Instagram';
+import HealthMate from '../screens/canDone/HealthMate';
+import SnapchatDiscovery from '../screens/canDone/SnapchatDiscovery';
+import TinderSwiping from '../screens/canDone/TinderSwiping';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import Worklet from '../screens/5minus/Worklet';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator />
+      <TabComponent />
     </NavigationContainer>
   );
+}
+
+const TabNavi = createBottomTabNavigator();
+
+const TabComponent: React.FC<{}> = () => {
+  return (
+    <TabNavi.Navigator>
+      <TabNavi.Screen options={{
+        header: () => null
+      }} name="Done" component={Stack1Navigator} />
+      <TabNavi.Screen options={{
+        header: () => null
+      }} name="5Minus" component={Stack2Navigator} />
+    </TabNavi.Navigator>
+  )
 }
 
 /**
@@ -37,32 +56,48 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
  * https://reactnavigation.org/docs/modal
  */
 
-const Stack = createNativeStackNavigator();
+const Stack1 = createNativeStackNavigator();
 
-function RootNavigator() {
+function Stack1Navigator() {
   return (
-    <Stack.Navigator
+    <Stack1.Navigator
       initialRouteName={"YouTube"}
     >
-      <Stack.Screen name="YouTube" component={TabOneScreen} options={() => ({
-        title: 'William\'s Channel',
+      <Stack1.Screen name="YouTube" component={TabOneScreen} options={() => ({
+        title: 'Can it be Done in RN',
       })} />
-      <Stack.Screen name="JuiceCards" component={JuiceCards} />
-      <Stack.Screen name="Tab" component={Tab} />
-      <Stack.Screen name="RevolutChart" component={RevolutChart} />
-      <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
-      <Stack.Screen name="Meditation" component={Meditation} />
-      <Stack.Screen name="Freeletics" component={Freeletics} />
-      <Stack.Screen name="Instagram" component={Instagram} />
-      <Stack.Screen name="HealthMate" component={HealthMate} />
-      <Stack.Screen name="SnapchatDiscovery" options={() => ({
+      <Stack1.Screen name="JuiceCards" component={JuiceCards} />
+      <Stack1.Screen name="Tab" component={Tab} />
+      <Stack1.Screen name="RevolutChart" component={RevolutChart} />
+      <Stack1.Screen name="AudioPlayer" component={AudioPlayer} />
+      <Stack1.Screen name="Meditation" component={Meditation} />
+      <Stack1.Screen name="Freeletics" component={Freeletics} />
+      <Stack1.Screen name="Instagram" component={Instagram} />
+      <Stack1.Screen name="HealthMate" component={HealthMate} />
+      <Stack1.Screen name="SnapchatDiscovery" options={() => ({
         header: () => null
       })} component={SnapchatDiscovery} />
-      <Stack.Screen name="TinderSwiping" component={TinderSwiping} />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
-      </Stack.Group>
-    </Stack.Navigator>
+      <Stack1.Screen name="TinderSwiping" component={TinderSwiping} />
+      <Stack1.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack1.Group screenOptions={{ presentation: 'modal' }}>
+        <Stack1.Screen name="Modal" component={ModalScreen} />
+      </Stack1.Group>
+    </Stack1.Navigator>
+  );
+}
+
+
+const Stack2 = createNativeStackNavigator();
+
+function Stack2Navigator() {
+  return (
+    <Stack2.Navigator
+      initialRouteName={"YouTube"}
+    >
+      <Stack2.Screen name="YouTube" component={TabTwoScreen} options={() => ({
+        title: '5 Minus Reanimated',
+      })} />
+      <Stack2.Screen name="Worklet" component={Worklet} />
+    </Stack2.Navigator>
   );
 }

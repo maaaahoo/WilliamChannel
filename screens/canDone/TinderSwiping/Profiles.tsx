@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Feather as Icon } from "@expo/vector-icons";
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import Card from "./Card";
-import Animated, { interpolate, concat, Extrapolate, cond, eq, set, Value, clockRunning, startClock, spring, stopClock, Clock, lessThan, and, greaterThan } from 'react-native-reanimated';
+import Animated, { add, concat, Extrapolate, cond, eq, set, Value, clockRunning, startClock, spring, stopClock, Clock, lessThan, and, greaterThan } from 'react-native-reanimated';
 
 const {width} = Dimensions.get('window');
 interface ProfilesProps {
