@@ -24,6 +24,7 @@ import HealthMate from '../screens/canDone/HealthMate';
 import SnapchatDiscovery from '../screens/canDone/SnapchatDiscovery';
 import TinderSwiping from '../screens/canDone/TinderSwiping';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Tarot from '../screens/canDone/Tarot';
 
 import Worklet from '../screens/5minus/Worklet';
 import CircularProgress from "../screens/5minus/CircularProgress"
@@ -80,6 +81,7 @@ function Stack1Navigator() {
         header: () => null
       })} component={SnapchatDiscovery} />
       <Stack1.Screen name="TinderSwiping" component={TinderSwiping} />
+      <Stack1.Screen name="Tarot" component={Tarot} />
       <Stack1.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack1.Group screenOptions={{ presentation: 'modal' }}>
         <Stack1.Screen name="Modal" component={ModalScreen} />
