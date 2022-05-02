@@ -31,6 +31,7 @@ import LayoutAnimations from '../screens/canDone/LayoutAnimations';
 import Worklet from '../screens/5minus/Worklet';
 import CircularProgress from "../screens/5minus/CircularProgress"
 import AccordionList from '../screens/5minus/AccordionList';
+import Breathe from '../screens/5minus/Breathe';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -108,6 +109,7 @@ function Stack2Navigator() {
       <Stack2.Screen name="Worklet" component={Worklet} />
       <Stack2.Screen name="CircularProgress" component={CircularProgress} />
       <Stack2.Screen name="AccordionList" component={AccordionList} />
+      <Stack2.Screen name="Breathe" component={Breathe} />
     </Stack2.Navigator>
   );
 }
