@@ -27,6 +27,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Tarot from '../screens/canDone/Tarot';
 import PhilzCoffee from '../screens/canDone/PhilzCoffee';
 import LayoutAnimations from '../screens/canDone/LayoutAnimations';
+import Fluid from '../screens/canDone/Fluid';
 
 import Worklet from '../screens/5minus/Worklet';
 import CircularProgress from "../screens/5minus/CircularProgress"
@@ -88,6 +89,7 @@ function Stack1Navigator() {
       <Stack1.Screen name="Tarot" component={Tarot} />
       <Stack1.Screen name="PhilzCoffee" component={PhilzCoffee} />
       <Stack1.Screen name="LayoutAnimations" component={LayoutAnimations} />
+      <Stack1.Screen name="Fluid" component={Fluid} />
       <Stack1.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack1.Group screenOptions={{ presentation: 'modal' }}>
         <Stack1.Screen name="Modal" component={ModalScreen} />
