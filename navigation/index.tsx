@@ -29,6 +29,7 @@ import PhilzCoffee from '../screens/canDone/PhilzCoffee';
 import LayoutAnimations from '../screens/canDone/LayoutAnimations';
 import Fluid from '../screens/canDone/Fluid';
 import Pinch from '../screens/canDone/Pinch';
+import BedTime from '../screens/canDone/BedTime';
 
 import Worklet from '../screens/5minus/Worklet';
 import CircularProgress from "../screens/5minus/CircularProgress"
@@ -89,9 +90,8 @@ function Stack1Navigator() {
       <Stack1.Screen name="TinderSwiping" component={TinderSwiping} />
       <Stack1.Screen name="Tarot" component={Tarot} />
       <Stack1.Screen name="PhilzCoffee" component={PhilzCoffee} />
-      <Stack1.Screen name="LayoutAnimations" component={LayoutAnimations} />
       <Stack1.Screen name="Fluid" component={Fluid} />
-      <Stack1.Screen name="Pinch" component={Pinch} />
+      <Stack1.Screen name="BedTime" component={BedTime} />
       <Stack1.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack1.Group screenOptions={{ presentation: 'modal' }}>
         <Stack1.Screen name="Modal" component={ModalScreen} />
@@ -115,7 +115,9 @@ function Stack2Navigator() {
       <Stack2.Screen name="CircularProgress" component={CircularProgress} />
       <Stack2.Screen name="AccordionList" component={AccordionList} />
       <Stack2.Screen name="Breathe" component={Breathe} />
+      <Stack2.Screen name="LayoutAnimations" component={LayoutAnimations} />
       <Stack2.Screen name="ChanelScroll" component={ChanelScroll} />
+      <Stack2.Screen name="Pinch" component={Pinch} />
     </Stack2.Navigator>
   );
 }

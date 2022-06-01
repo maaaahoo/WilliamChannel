@@ -21,6 +21,12 @@ const TabOneScreen: React.FC<{}> = (props: any) => {
       <ListRow title={"ChanelScroll"} onPress={() => {
         props.navigation.navigate('ChanelScroll');
       }} />
+      <ListRow title={"Pinch"} onPress={() => {
+        props.navigation.navigate('Pinch');
+      }} />
+      <ListRow title={"LayoutAnimations"} onPress={() => {
+        props.navigation.navigate('LayoutAnimations');
+      }} />
     </ScrollView>
   );
 }
