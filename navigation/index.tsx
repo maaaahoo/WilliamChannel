@@ -36,6 +36,7 @@ import CircularProgress from "../screens/5minus/CircularProgress"
 import AccordionList from '../screens/5minus/AccordionList';
 import Breathe from '../screens/5minus/Breathe';
 import ChanelScroll from '../screens/5minus/ChanelScroll';
+import StickyShapes from '../screens/5minus/StickyShapes';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -118,6 +119,7 @@ function Stack2Navigator() {
       <Stack2.Screen name="LayoutAnimations" component={LayoutAnimations} />
       <Stack2.Screen name="ChanelScroll" component={ChanelScroll} />
       <Stack2.Screen name="Pinch" component={Pinch} />
+      <Stack2.Screen name="StickyShapes" component={StickyShapes} />
     </Stack2.Navigator>
   );
 }
